@@ -3,463 +3,455 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MP-Dienstleistungen &amp; Gebäudemanagement — Gebäudereinigung in Bürstadt</title>
-  <meta name="description" content="MP-Dienstleistungen & Gebäudemanagement: Gebäudereinigung, Hausmeisterservice, Grün- und Graupflege, Glasreinigung und Winterdienst in Bürstadt, Mannheim und der Rhein-Neckar-Region. Seit 2018.">
+  <title>MP-Dienstleistungen &amp; Gebäudemanagement — Gebäudereinigung in Bürstadt &amp; Rhein-Neckar</title>
+  <meta name="description" content="Gebäudereinigung, Objektbetreuung, Grün- und Graupflege, Glasreinigung und Winterdienst für Gewerbekunden in Bürstadt, Mannheim und der Rhein-Neckar-Region. Eigener Fuhrpark, feste Ansprechpartner — seit 2018.">
+  <meta property="og:title" content="MP-Dienstleistungen & Gebäudemanagement">
+  <meta property="og:description" content="Gebäudereinigung & Objektbetreuung für Gewerbekunden in der Rhein-Neckar-Region. Verlässlichkeit schafft Vertrauen.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<a class="visually-hidden" href="#main">Zum Inhalt springen</a>
+
 <header class="site-header">
   <nav class="nav" aria-label="Hauptnavigation">
-    <a class="brand" href="#top">
-      <svg width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="MP-Dienstleistungen Logo">
-        <circle cx="20" cy="20" r="20" fill="#14776e"/>
-        <path d="M8 15h18l6-4H8z" fill="#f1ece1"/>
-        <path d="M8 22h22l6-4H8z" fill="#f1ece1" opacity=".85"/>
-        <path d="M8 29h26l6-4H8z" fill="#f1ece1" opacity=".7"/>
+    <a class="brand" href="#top" aria-label="MP-Dienstleistungen — Startseite">
+      <svg width="42" height="42" viewBox="0 0 42 42" role="img" aria-hidden="true">
+        <circle cx="21" cy="21" r="21" fill="#0e6b62"/>
+        <path d="M8 16h19l7-4.5H8z" fill="#f4f1e9"/>
+        <path d="M8 23h23l7-4.5H8z" fill="#f4f1e9" opacity=".82"/>
+        <path d="M8 30h27l7-4.5H8z" fill="#f4f1e9" opacity=".64"/>
       </svg>
-      <span class="brand-name">MP-Dienstleistungen
-        <small>&amp; Gebäudemanagement</small>
-      </span>
+      <span class="brand-name"><b>MP-Dienstleistungen</b><span>&amp; Gebäudemanagement</span></span>
     </a>
 
     <ul class="nav-links">
       <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#ablauf">Ablauf</a></li>
       <li><a href="#ueber-uns">Über uns</a></li>
-      <li><a href="#umwelt">Umwelt</a></li>
-      <li><a href="#jobs">Jobs</a></li>
       <li><a href="#referenzen">Referenzen</a></li>
+      <li><a href="#jobs">Jobs</a></li>
     </ul>
 
-    <a class="btn btn--solid nav-cta" href="#kontakt">Kontakt</a>
-
-    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right">
+      <a class="btn nav-phone" href="tel:+4962069504530">Anrufen</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <div class="mobile-menu" id="mobile-menu">
     <ul>
-      <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#ueber-uns">Über uns</a></li>
-      <li><a href="#umwelt">Umwelt</a></li>
-      <li><a href="#jobs">Jobs</a></li>
-      <li><a href="#referenzen">Referenzen</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#leistungen"><i>01</i> Leistungen</a></li>
+      <li><a href="#ablauf"><i>02</i> Ablauf</a></li>
+      <li><a href="#ueber-uns"><i>03</i> Über uns</a></li>
+      <li><a href="#referenzen"><i>04</i> Referenzen</a></li>
+      <li><a href="#umwelt"><i>05</i> Umwelt</a></li>
+      <li><a href="#jobs"><i>06</i> Jobs</a></li>
+      <li><a class="btn" href="#kontakt">Angebot anfragen</a></li>
     </ul>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
+  <span id="top"></span>
 
-  <!-- ============ HERO ============ -->
+  <!-- ================= HERO ================= -->
   <section class="hero">
-    <div class="hero-meta">
-      <span>Gebäudereinigung · Objektbetreuung · Grünpflege</span>
-      <span><strong>Bürstadt, Hessen</strong> — seit 2018</span>
-    </div>
-    <div class="hero-top">
-      <h1 class="display-xl">Gepflegte Gebäude sind <em class="accent-i">kein Zufall.</em></h1>
-      <div class="hero-aside">
-        <p class="lead">Gebäudereinigung, Objektbetreuung und Grünpflege für Gewerbe­kunden in Bürstadt, Mannheim und der Rhein-Neckar-Region — seit 2018.</p>
-        <div class="hero-actions">
-          <a class="btn btn--solid" href="#kontakt">Angebot anfragen <span class="btn-arrow" aria-hidden="true">→</span></a>
-          <a class="btn" href="#leistungen">Unsere Leistungen</a>
+    <div class="hero-inner">
+      <div class="hero-eyebrow-row">
+        <span class="eyebrow">Gebäudereinigung &amp; Objektbetreuung</span>
+        <span class="loc">Bürstadt · Mannheim · Rhein-Neckar</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 class="display">Saubere Gebäude, auf die <span class="serif-italic text-petrol">Verlass</span> ist.</h1>
+          <p class="lead">Reinigung, Hausmeisterservice und Grünpflege für Gewerbeobjekte — mit eigenem Fuhrpark, festen Ansprechpartnern und Mitarbeitern, die ihr Handwerk verstehen.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#kontakt">Angebot anfragen <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="#leistungen">Leistungen ansehen</a>
+          </div>
+          <p class="hero-note">Seit 2018 · Betriebshaftpflichtversichert · Antwort in der Regel am selben Werktag</p>
         </div>
-      </div>
-    </div>
-    <div class="hero-media">
-      <figure class="hero-tile--main">
-        <img src="assets/img/transporter.jpg" alt="Transporter von MP-Dienstleistungen mit Anhänger und Arbeitsbühne im Einsatz" fetchpriority="high">
-        <figcaption>
-          <span>Eigener Fuhrpark im Einsatz</span>
-          <span>Rhein-Neckar-Region</span>
-        </figcaption>
-      </figure>
-      <figure class="hero-tile--team">
-        <img src="assets/img/team-fuhrpark.jpg" alt="Das Team von MP-Dienstleistungen mit Firmenfahrzeugen vor dem Firmensitz" fetchpriority="high">
-        <figcaption>
-          <span>Team &amp; Fuhrpark, Bürstadt</span>
-          <span>Nibelungenstr. 147</span>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
 
-  <!-- ============ LAUFBAND ============ -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Unterhaltsreinigung</span><span>Glasreinigung</span><span>Hausmeisterservices</span><span>Osmosereinigung</span><span>Grünpflege</span><span>Graupflege</span><span>Teppichboden-Reinigung</span><span>Schmutzfangmatten</span><span>Bau- &amp; Endreinigung</span><span>Fassadenreinigung</span><span>Winterdienst</span><span>Zapfsäulenreinigung</span>
-      <span>Unterhaltsreinigung</span><span>Glasreinigung</span><span>Hausmeisterservices</span><span>Osmosereinigung</span><span>Grünpflege</span><span>Graupflege</span><span>Teppichboden-Reinigung</span><span>Schmutzfangmatten</span><span>Bau- &amp; Endreinigung</span><span>Fassadenreinigung</span><span>Winterdienst</span><span>Zapfsäulenreinigung</span>
-    </div>
-  </div>
-
-  <!-- ============ LEITSATZ ============ -->
-  <section class="section statement reveal">
-    <span class="statement-mark" aria-hidden="true">✱</span>
-    <span class="eyebrow">Unser Leitsatz</span>
-    <h2 class="display-lg">Verlässlichkeit schafft <em class="accent-i">Vertrauen.</em></h2>
-    <p>Im gewerblichen Bereich sind Sie bei uns in den richtigen Händen, wenn es um Ihre Gebäudepflege geht. Unsere Mitarbeiter vor Ort sind mit ihrer Arbeit jederzeit vertraut und üben sie hoch professionell aus.</p>
-  </section>
-
-  <!-- ============ ÜBER UNS ============ -->
-  <section class="section" id="ueber-uns">
-    <div class="section-head">
-      <span class="eyebrow">01 · Über uns</span>
-      <h2 class="display-lg">Ein junges Unternehmen mit&nbsp;Haltung</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-copy reveal">
-        <p>Herzlich willkommen bei MP-Dienstleistungen &amp; Gebäudemanagement. Wir sind seit 2018 ein junger, aufstrebender Dienstleister in Sachen Reinigung, Objektbetreuung und Grünpflege — geprägt von hoch anspruchsvoll ausgeführter Arbeit.</p>
-        <p>Uns ist es wichtig, den Menschen hinter der Arbeitskleidung zu sehen. Genau aus diesem Grund setzen wir uns stets für unsere Mitarbeiter ein: ein offenes Ohr, eine starke Schulter — ein Arbeitgeber, mit dem man sich auf Augenhöhe unterhalten kann.</p>
-        <p>Wir machen den Unterschied.</p>
-        <blockquote class="about-quote">„Weil ein Handschuh noch lange keine Abstufung ist."</blockquote>
-        <p class="about-sign">
-          <strong>Manuel Profeta</strong>
-          Geschäftsführender Inhaber
-        </p>
-      </div>
-      <div class="about-media">
-        <figure class="reveal">
-          <img src="assets/img/team-objekt.jpg" alt="Fünf Mitarbeiter von MP-Dienstleistungen in Arbeitskleidung vor einem Bürogebäude" loading="lazy">
-          <figcaption>Objektbetreuung im Auftrag unserer Kunden</figcaption>
-        </figure>
-        <figure class="reveal">
-          <img src="assets/img/osmose-buerste.jpg" alt="Osmosereinigung einer Fassade mit Teleskopbürste und entmineralisiertem Wasser" loading="lazy">
-          <figcaption>Osmoseverfahren an der Fassade</figcaption>
+        <figure class="hero-figure">
+          <div class="frame">
+            <img src="assets/img/glasreinigung-caritas.png" alt="Mitarbeiter von MP-Dienstleistungen reinigt eine Glasfassade mit Teleskopstange und Reinstwasser" width="576" height="768" fetchpriority="high">
+            <figcaption class="frame-tag">Glasreinigung im Objekt</figcaption>
+          </div>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- ============ LEISTUNGEN ============ -->
+  <!-- ================= TRUST BAND ================= -->
+  <section class="trust" aria-label="Auf einen Blick">
+    <div class="trust-inner">
+      <div class="trust-item"><b>Bürstadt, Hessen</b><span>Firmensitz &amp; Einzugsgebiet</span></div>
+      <div class="trust-item"><b>Seit 2018</b><span>Inhabergeführt</span></div>
+      <div class="trust-item"><b>Eigener Fuhrpark</b><span>Fahrzeuge &amp; Maschinenpark</span></div>
+      <div class="trust-item"><b>Versichert</b><span>Betriebshaftpflicht</span></div>
+    </div>
+  </section>
+
+  <!-- ================= LEISTUNGEN ================= -->
   <section class="section" id="leistungen">
-    <div class="section-head section-head--split">
-      <div>
-        <span class="eyebrow">02 · Leistungen</span>
-        <h2 class="display-lg">Zwölf Gewerke, ein&nbsp;Ansprechpartner</h2>
+    <div class="section-inner">
+      <div class="services-top">
+        <div class="section-head section-head--wide" style="margin-bottom:0">
+          <span class="eyebrow">Leistungen</span>
+          <h2 class="h2">Zwölf Gewerke, ein Ansprechpartner.</h2>
+        </div>
+        <p class="lead">Von der täglichen Unterhaltsreinigung bis zum Winterdienst um fünf Uhr morgens — nach festem Leistungsverzeichnis, dokumentiert und zuverlässig.</p>
       </div>
-      <p class="lead">Von der täglichen Unterhaltsreinigung bis zum Winterdienst um fünf Uhr morgens — mit professionellem Gerät und Mitarbeitern, die ihr Handwerk verstehen.</p>
-    </div>
 
-    <ol class="services-list">
-      <li class="service reveal">
-        <span class="service-num">01</span>
-        <h3 class="service-name">Unterhaltsreinigung</h3>
-        <span class="service-tag">Büro · Praxis · Verwaltung</span>
-        <p class="service-desc">Regelmäßige Reinigung Ihrer Räume nach festem Leistungsverzeichnis — zuverlässig, dokumentiert und mit festen Ansprechpartnern.</p>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">02</span>
-        <h3 class="service-name">Glasreinigung</h3>
-        <span class="service-tag">Fenster · Schaufenster · Fassaden</span>
-        <p class="service-desc">Streifenfreie Glasflächen innen und außen, auch in großer Höhe — mit Teleskopstangen und geschultem Personal.</p>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">03</span>
-        <h3 class="service-name">Hausmeisterservices</h3>
-        <span class="service-tag">Objektbetreuung</span>
-        <p class="service-desc">Kleinreparaturen, Kontrollgänge, Zählerstände, Koordination von Handwerkern — Ihr Objekt in verlässlichen Händen.</p>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">04</span>
-        <h3 class="service-name">Osmosereinigung</h3>
-        <span class="service-tag">Entmineralisiertes Wasser</span>
-        <p class="service-desc">Chemiefreie Reinigung von Glas und Fassaden mit Reinwasser — fleckenfrei trocknend, umweltschonend, ideal für große Flächen.</p>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">05</span>
-        <h3 class="service-name">Grünpflege</h3>
-        <span class="service-tag">Rasen · Hecken · Gehölz</span>
-        <p class="service-desc">Rasenschnitt, Heckenpflege und Gehölzrückschnitt im festen Turnus — damit Ihre Außenanlagen ganzjährig gepflegt wirken.</p>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">06</span>
-        <h3 class="service-name">Graupflege</h3>
-        <span class="service-tag">Wege · Höfe · Stellplätze</span>
-        <p class="service-desc">Kehren, Wildkrautbeseitigung und Sauberhaltung befestigter Flächen — der oft vergessene Teil eines gepflegten Objekts.</p>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">07</span>
-        <h3 class="service-name">Teppichboden-Reinigung</h3>
-        <span class="service-tag">Sprühextraktion</span>
-        <p class="service-desc">Tiefenreinigung textiler Böden mit professioneller Maschinentechnik — verlängert die Lebensdauer Ihrer Beläge deutlich.</p>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">08</span>
-        <h3 class="service-name">Schmutzfangmatten-Service</h3>
-        <span class="service-tag">Tausch im Abo</span>
-        <p class="service-desc">Saubere Matten im regelmäßigen Wechsel — weniger eingetragener Schmutz, weniger Reinigungsaufwand im Gebäude.</p>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">09</span>
-        <h3 class="service-name">Bau- &amp; Endreinigung</h3>
-        <span class="service-tag">Übergabefertig</span>
-        <p class="service-desc">Grob-, Fein- und Endreinigung nach Bauabschluss — damit Sie Ihr Objekt termingerecht und besenrein übergeben können.</p>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">10</span>
-        <h3 class="service-name">Fassadenreinigung</h3>
-        <span class="service-tag">Hochdruck · Schonverfahren</span>
-        <p class="service-desc">Entfernung von Algen, Moos und Verschmutzungen — mit dem passenden Verfahren für jedes Fassadenmaterial.</p>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">11</span>
-        <h3 class="service-name">Winterdienst</h3>
-        <span class="service-tag">Räumen · Streuen · Haftung</span>
-        <p class="service-desc">Räum- und Streudienst mit eigenem Maschinenpark, inklusive Dokumentation — Sie erfüllen Ihre Verkehrssicherungspflicht, wir den Rest.</p>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">12</span>
-        <h3 class="service-name">Zapfsäulenreinigung</h3>
-        <span class="service-tag">Tankstellen</span>
-        <p class="service-desc">Fachgerechte Reinigung von Zapfsäulen und Tankfeldern — ein sauberer erster Eindruck für Ihre Kunden.</p>
-      </li>
-    </ol>
-
-    <div class="services-media">
-      <figure class="reveal">
-        <img src="assets/img/glasreinigung-caritas.png" alt="Mitarbeiter reinigt die Glasfassade eines Caritas-Gebäudes mit Teleskopstange" loading="lazy">
-        <figcaption>Glasreinigung</figcaption>
-      </figure>
-      <figure class="reveal">
-        <img src="assets/img/winterdienst-traktor.jpg" alt="Kommunaltraktor mit Schneeschild für den Winterdienst" loading="lazy">
-        <figcaption>Winterdienst</figcaption>
-      </figure>
-      <figure class="reveal">
-        <img src="assets/img/fassade-detail.jpg" alt="Fassadenlamellen mit Wassertropfen nach der Reinigung" loading="lazy">
-        <figcaption>Fassadenreinigung</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ============ BILANZ (DARK) ============ -->
-  <section class="section chapter">
-    <span class="eyebrow">03 · Bilanz 2019 – 2024</span>
-    <h2 class="display-lg">Sauberkeit lässt sich <em class="accent-i" style="color:#6fbfb5">messen.</em> Hier ist unsere.</h2>
-    <p class="chapter-intro lead">Seit Gründung führen wir Buch über jede Fläche, die wir reinigen, räumen und pflegen. Drei Zahlen aus sechs Jahren Arbeit:</p>
-
-    <ul class="facts">
-      <li class="fact reveal">
-        <span class="fact-label">Reinigungsleistung</span>
-        <span class="fact-value"><span class="count" data-target="11341394">0</span>&nbsp;m²</span>
-        <p class="fact-note">gereinigte Fläche seit 2019 — das entspricht mehr als 1.500 Fußballfeldern.</p>
-      </li>
-      <li class="fact reveal">
-        <span class="fact-label">Winterdienst</span>
-        <span class="fact-value">≈ <span class="count" data-target="26">0</span> Blauwale</span>
-        <p class="fact-note">so viel wiegt der Schnee, den wir seit 2019 geräumt haben.</p>
-      </li>
-      <li class="fact reveal">
-        <span class="fact-label">Grünschnitt</span>
-        <span class="fact-value"><span class="count" data-target="38.4" data-decimals="1">0</span> Hektar</span>
-        <p class="fact-note">Grünfläche seit Gründung bearbeitet — gemäht, geschnitten, gepflegt.</p>
-      </li>
-    </ul>
-    <p class="chapter-source">Quelle: eigene Leistungsdokumentation, Stand 2024</p>
-  </section>
-
-  <!-- ============ UMWELT ============ -->
-  <section class="section" id="umwelt">
-    <div class="section-head">
-      <span class="eyebrow">04 · Umweltschutz</span>
-      <h2 class="display-lg">Ein Baum für jede Bewertung</h2>
-    </div>
-    <div class="env-grid">
-      <div class="env-copy reveal">
-        <p>Umweltschutz ist uns wichtig. Für jede positive Google-Bewertung lassen wir in Kooperation mit <strong>Plant-for-the-Planet</strong> und <strong>ReviewForest</strong> einen echten Baum pflanzen. Zusätzlich wird für jede Bewertung 1&nbsp;€ in die Umweltbildung von Kindern an den Kinderakademien von Plant-for-the-Planet investiert.</p>
-        <h3>Warum engagieren wir uns für die Natur?</h3>
-        <p>Jedes Unternehmen muss wirtschaftlich arbeiten und funktionieren. Wir bei MP-Dienstleistungen wollen ein Stück unseres Erfolges zurückgeben. ReviewForest ist eine Möglichkeit, wirtschaftlich zu arbeiten und gleichzeitig unsere Natur zu unterstützen.</p>
-        <h3>Warum ReviewForest?</h3>
-        <p>ReviewForest bietet uns eine transparente Möglichkeit, unseren Fortschritt im Umweltschutz zu verfolgen. Das gibt uns die Gewissheit, dass unsere Unterstützung auch ankommt. Weitere soziale Projekte schließen wir nicht aus — mit ReviewForest haben wir den ersten Schritt gemacht.</p>
-      </div>
-      <aside class="env-panel reveal">
-        <span class="eyebrow">Wald von MP-Dienstleistungen</span>
-        <h3>Schreiben Sie eine Bewertung — wir pflanzen einen Baum in Ihrem Namen.</h3>
-        <ol class="env-steps">
-          <li><span class="env-step-num">1</span> Google-Bewertung für MP-Dienstleistungen Bürstadt schreiben</li>
-          <li><span class="env-step-num">2</span> Ein echter Baum wird gepflanzt</li>
-          <li><span class="env-step-num">3</span> 1&nbsp;€ fließt in die Umweltbildung von Kindern</li>
+      <div class="services-grid">
+        <ol class="service-list reveal">
+          <li class="service"><span class="service-n">01</span><span class="service-name">Unterhaltsreinigung</span><span class="service-desc">Regelmäßige Reinigung von Büro-, Praxis- und Verwaltungsräumen nach festem Plan und mit festen Ansprechpartnern.</span></li>
+          <li class="service"><span class="service-n">02</span><span class="service-name">Glasreinigung</span><span class="service-desc">Streifenfreie Glas- und Fensterflächen innen und außen, auch in der Höhe.</span></li>
+          <li class="service"><span class="service-n">03</span><span class="service-name">Hausmeisterservice</span><span class="service-desc">Kontrollgänge, Kleinreparaturen, Zählerstände und Koordination von Handwerkern.</span></li>
+          <li class="service"><span class="service-n">04</span><span class="service-name">Osmosereinigung</span><span class="service-desc">Chemiefreie Reinigung von Glas und Fassaden mit entmineralisiertem Reinstwasser — fleckenfrei trocknend.</span></li>
+          <li class="service"><span class="service-n">05</span><span class="service-name">Grünpflege</span><span class="service-desc">Rasenschnitt, Heckenpflege und Gehölzrückschnitt im festen Turnus.</span></li>
+          <li class="service"><span class="service-n">06</span><span class="service-name">Graupflege</span><span class="service-desc">Kehren, Wildkraut­beseitigung und Sauberhaltung befestigter Wege, Höfe und Stellplätze.</span></li>
+          <li class="service"><span class="service-n">07</span><span class="service-name">Teppichbodenreinigung</span><span class="service-desc">Tiefenreinigung textiler Böden mit Sprühextraktion — verlängert die Lebensdauer der Beläge.</span></li>
+          <li class="service"><span class="service-n">08</span><span class="service-name">Schmutzfangmatten-Service</span><span class="service-desc">Saubere Matten im regelmäßigen Tausch — weniger eingetragener Schmutz im Gebäude.</span></li>
+          <li class="service"><span class="service-n">09</span><span class="service-name">Bau- &amp; Endreinigung</span><span class="service-desc">Grob-, Fein- und Endreinigung nach Bauabschluss — übergabefertig und termingerecht.</span></li>
+          <li class="service"><span class="service-n">10</span><span class="service-name">Fassadenreinigung</span><span class="service-desc">Entfernung von Algen, Moos und Verschmutzungen — im passenden Verfahren je Material.</span></li>
+          <li class="service"><span class="service-n">11</span><span class="service-name">Winterdienst</span><span class="service-desc">Räum- und Streudienst mit eigenem Maschinenpark, inklusive Dokumentation der Verkehrssicherung.</span></li>
+          <li class="service"><span class="service-n">12</span><span class="service-name">Zapfsäulenreinigung</span><span class="service-desc">Fachgerechte Reinigung von Zapfsäulen und Tankfeldern für Tankstellenbetreiber.</span></li>
         </ol>
-        <a class="btn btn--solid" href="https://reviewforest.org" target="_blank" rel="noopener">Bewertung abgeben <span class="btn-arrow" aria-hidden="true">→</span></a>
-      </aside>
+
+        <div class="services-media">
+          <figure class="frame reveal">
+            <img src="assets/img/osmose-buerste.jpg" alt="Osmose-Reinigung einer Fassade mit Teleskopbürste und Reinstwasser" width="576" height="768" loading="lazy">
+            <figcaption class="frame-tag">Osmoseverfahren</figcaption>
+          </figure>
+          <div class="duo">
+            <figure class="frame reveal">
+              <img src="assets/img/winterdienst-traktor.jpg" alt="Kommunaltraktor mit Schneeschild für den Winterdienst" width="1024" height="768" loading="lazy">
+              <figcaption class="frame-tag">Winterdienst</figcaption>
+            </figure>
+            <figure class="frame reveal">
+              <img src="assets/img/transporter.jpg" alt="Transporter von MP-Dienstleistungen mit Anhänger und Arbeitsbühne" width="1024" height="768" loading="lazy">
+              <figcaption class="frame-tag">Eigener Fuhrpark</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ JOBS ============ -->
-  <section class="section jobs" id="jobs">
-    <div class="section-head">
-      <span class="eyebrow">05 · Jobbörse</span>
-      <h2 class="display-lg">Arbeiten auf Augenhöhe</h2>
-    </div>
+  <!-- ================= ABLAUF ================= -->
+  <section class="section process" id="ablauf">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">So arbeiten wir</span>
+        <h2 class="h2">Vom ersten Anruf bis zur Abnahme.</h2>
+      </div>
 
-    <article class="job-card reveal">
-      <div class="job-head">
-        <h3>Reinigungsfachkraft (m/w/d)</h3>
-        <span class="job-meta">Minijob · Teilzeit · Vollzeit — Mannheim &amp; Umgebung</span>
-      </div>
-      <div class="job-body">
-        <div class="job-col">
-          <h4>Das erwartet Sie</h4>
-          <ul>
-            <li>Ein freundliches Team aus begeisterten Mitarbeitern</li>
-            <li>Übertarifliche Bezahlung</li>
-            <li>Professionelles Werkzeug und Arbeitskleidung</li>
-            <li>Fahrzeuge für Ihren Arbeitseinsatz</li>
-          </ul>
+      <div class="process-grid">
+        <div class="step reveal">
+          <span class="step-n">Schritt 01</span>
+          <h3>Anfrage</h3>
+          <p>Sie schildern uns Objekt, Flächen und gewünschten Turnus — telefonisch oder über das Formular.</p>
         </div>
-        <div class="job-col">
-          <h4>Das sollten Sie mitbringen</h4>
-          <ul>
-            <li>Kenntnisse in der Gebäude- und/oder Glasreinigung</li>
-            <li>Gute Deutsch- und/oder Englischkenntnisse</li>
-            <li>Führerschein Klasse B</li>
-            <li>Ein gepflegtes Erscheinungsbild</li>
-            <li>Arbeitsbereitschaft an Wochenenden</li>
-          </ul>
+        <div class="step reveal">
+          <span class="step-n">Schritt 02</span>
+          <h3>Objektbesichtigung</h3>
+          <p>Wir sehen uns die Gegebenheiten vor Ort an und nehmen Aufmaß nach den Richtlinien des Gebäudereinigerhandwerks.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-n">Schritt 03</span>
+          <h3>Festes Angebot</h3>
+          <p>Sie erhalten ein transparentes Angebot mit klarem Leistungsverzeichnis — ohne versteckte Positionen.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-n">Schritt 04</span>
+          <h3>Ausführung</h3>
+          <p>Ein festes Team übernimmt Ihr Objekt — mit professionellem Gerät, Arbeitskleidung und festen Ansprechpartnern.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-n">Schritt 05</span>
+          <h3>Abnahme &amp; Betreuung</h3>
+          <p>Wir dokumentieren die Leistung und bleiben erreichbar — Rückmeldungen werden unverzüglich bearbeitet.</p>
         </div>
       </div>
-      <div class="job-foot">
-        <p>Wir sehen den Menschen hinter der Arbeitskleidung — bewerben Sie sich formlos per E-Mail oder rufen Sie einfach an.</p>
-        <a class="btn btn--solid" href="mailto:info@mp-dienstleistungen.com?subject=Bewerbung%20Reinigungsfachkraft">Jetzt bewerben <span class="btn-arrow" aria-hidden="true">→</span></a>
-      </div>
-    </article>
+    </div>
   </section>
 
-  <!-- ============ REFERENZEN ============ -->
+  <!-- ================= BILANZ (dark) ================= -->
+  <section class="section chapter" aria-label="Bilanz 2019 bis 2024">
+    <div class="section-inner">
+      <div class="section-head section-head--wide">
+        <span class="eyebrow">Bilanz 2019 – 2024</span>
+        <h2 class="h2">Sauberkeit lässt sich <span class="serif-italic">messen.</span></h2>
+        <p class="lead">Seit Gründung führen wir Buch über jede Fläche, die wir reinigen, räumen und pflegen. Drei Zahlen aus sechs Jahren Arbeit:</p>
+      </div>
+
+      <ul class="facts">
+        <li class="fact reveal">
+          <span class="fact-label">Reinigungsleistung</span>
+          <span class="fact-value"><span class="count" data-target="11341394">0</span> m<sup>2</sup></span>
+          <span class="fact-note">gereinigte Fläche seit 2019 — mehr als 1.500 Fußballfelder.</span>
+        </li>
+        <li class="fact reveal">
+          <span class="fact-label">Winterdienst</span>
+          <span class="fact-value">≈ <span class="count" data-target="26">0</span> Blauwale</span>
+          <span class="fact-note">so viel wiegt der Schnee, den wir seit 2019 geräumt haben.</span>
+        </li>
+        <li class="fact reveal">
+          <span class="fact-label">Grünschnitt</span>
+          <span class="fact-value"><span class="count" data-target="38.4" data-decimals="1">0</span> Hektar</span>
+          <span class="fact-note">Grünfläche seit Gründung bearbeitet — gemäht, geschnitten, gepflegt.</span>
+        </li>
+      </ul>
+      <p class="chapter-source">Quelle: eigene Leistungsdokumentation, Stand 2024</p>
+    </div>
+  </section>
+
+  <!-- ================= ÜBER UNS ================= -->
+  <section class="section" id="ueber-uns">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow">Über uns</span>
+          <h2 class="h2">Wir sehen den Menschen hinter der Arbeitskleidung.</h2>
+          <p class="lead-plain">MP-Dienstleistungen ist seit 2018 ein junger, inhabergeführter Dienstleister für Reinigung, Objektbetreuung und Grünpflege — geprägt von hoch anspruchsvoll ausgeführter Arbeit.</p>
+          <p>Uns ist wichtig, dass sich unsere Mitarbeiter auf Augenhöhe behandelt fühlen: ein offenes Ohr, eine starke Schulter, ein Arbeitgeber, mit dem man reden kann. Wer sich wohlfühlt, arbeitet sorgfältiger — und das merken unsere Kunden.</p>
+          <blockquote class="quote">„Weil ein Handschuh noch lange keine Abstufung ist."</blockquote>
+          <div class="sign">
+            <b>Manuel Profeta</b>
+            <span>Geschäftsführender Inhaber</span>
+          </div>
+        </div>
+
+        <div class="about-media reveal">
+          <figure class="frame">
+            <img src="assets/img/team-objekt.jpg" alt="Das Team von MP-Dienstleistungen in Arbeitskleidung vor einem betreuten Objekt" width="800" height="600" loading="lazy">
+            <figcaption class="frame-tag">Team im Einsatz, Mannheim</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REFERENZEN ================= -->
   <section class="section" id="referenzen">
-    <div class="section-head">
-      <span class="eyebrow">06 · Referenzen</span>
-      <h2 class="display-lg">Kunden, die uns vertrauen</h2>
-    </div>
-    <p class="ref-intro lead reveal">Die Liste unserer zufriedenen Kunden erfreut sich ständigem Zuwachs. Werden auch Sie zufriedener Kunde von MP-Dienstleistungen — wir freuen uns auf Ihren Kontakt.</p>
-    <ul class="ref-list">
-      <li class="reveal"><span class="ref-name">Contargo</span><span class="ref-branche">Trimodale Logistik</span></li>
-      <li class="reveal"><span class="ref-name">Mannheimer Morgen</span><span class="ref-branche">Tageszeitung</span></li>
-      <li class="reveal"><span class="ref-name">HGM Mannheim</span><span class="ref-branche">Hafengesellschaft</span></li>
-      <li class="reveal"><span class="ref-name">Haas Mediengruppe</span><span class="ref-branche">Medienhaus</span></li>
-      <li class="reveal"><span class="ref-name">Rossmann</span><span class="ref-branche">Drogerie-Filialen</span></li>
-      <li class="reveal"><span class="ref-name">Hitachi Energy</span><span class="ref-branche">Energietechnik</span></li>
-    </ul>
-  </section>
-
-  <!-- ============ KONTAKT ============ -->
-  <section class="section" id="kontakt">
-    <div class="section-head">
-      <span class="eyebrow">07 · Kontakt</span>
-      <h2 class="display-lg">Wir freuen uns auf Ihre Anfrage</h2>
-    </div>
-
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <p class="lead">Haben Sie Fragen, Wünsche oder Anregungen? Nehmen Sie Kontakt mit uns auf — wir helfen Ihnen gerne weiter.</p>
-        <address>
-          <strong>MP-Dienstleistungen &amp; Gebäudemanagement</strong><br>
-          Manuel Profeta<br>
-          Nibelungenstraße 147<br>
-          68642 Bürstadt (Hessen)<br><br>
-          Telefon: <a href="tel:+4962069504530">+49 6206 950 45 30</a><br>
-          E-Mail: <a href="mailto:info@mp-dienstleistungen.com">info@mp-dienstleistungen.com</a>
-        </address>
-        <p class="contact-hours">Für Objektbesichtigungen und Angebote sind wir in Bürstadt, Mannheim und der gesamten Rhein-Neckar-Region unterwegs.</p>
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">Referenzen</span>
+        <h2 class="h2">Kunden, die uns ihr Objekt anvertrauen.</h2>
+        <p class="lead">Die Liste wächst stetig. Ein Auszug aus Unternehmen, für die wir in der Region tätig sind:</p>
       </div>
 
-      <form class="contact-form" id="contact-form" novalidate>
-        <div class="field">
-          <label for="cf-name">Name *</label>
-          <input type="text" id="cf-name" name="name" required autocomplete="name">
-        </div>
-        <div class="field">
-          <label for="cf-email">E-Mail-Adresse *</label>
-          <input type="email" id="cf-email" name="email" required autocomplete="email">
-        </div>
-        <div class="field">
-          <label for="cf-message">Nachricht *</label>
-          <textarea id="cf-message" name="message" required></textarea>
-        </div>
-        <div class="field field-captcha">
-          <label for="cf-captcha">Spam-Schutz: <span id="captcha-question">…</span> *</label>
-          <input type="text" id="cf-captcha" name="captcha" inputmode="numeric" required>
-        </div>
-        <label class="consent">
-          <input type="checkbox" id="cf-consent" required>
-          <span>Hiermit erkläre ich mich einverstanden, dass meine in das Kontaktformular eingegebenen Daten elektronisch gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann. *</span>
-        </label>
-        <p class="form-note">Felder mit * sind Pflichtfelder. Details in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        <button type="submit" class="btn btn--solid">Nachricht senden <span class="btn-arrow" aria-hidden="true">→</span></button>
-      </form>
+      <ul class="ref-list reveal">
+        <li class="ref"><span class="ref-name">Contargo</span><span class="ref-branche">Trimodale Logistik</span></li>
+        <li class="ref"><span class="ref-name">Mannheimer Morgen</span><span class="ref-branche">Tageszeitung</span></li>
+        <li class="ref"><span class="ref-name">HGM Mannheim</span><span class="ref-branche">Hafengesellschaft</span></li>
+        <li class="ref"><span class="ref-name">Haas Mediengruppe</span><span class="ref-branche">Medienhaus</span></li>
+        <li class="ref"><span class="ref-name">Rossmann</span><span class="ref-branche">Drogerie-Filialen</span></li>
+        <li class="ref"><span class="ref-name">Hitachi Energy</span><span class="ref-branche">Energietechnik</span></li>
+      </ul>
     </div>
   </section>
 
-  <!-- ============ CTA ============ -->
-  <section class="section cta-band">
-    <span class="eyebrow">Nächster Schritt</span>
-    <h2 class="display-lg">Werden Sie zufriedener Kunde von MP-Dienstleistungen.</h2>
-    <p>Unverbindliche Objektbesichtigung, transparentes Angebot, feste Ansprechpartner — rufen Sie an oder schreiben Sie uns.</p>
-    <a class="btn btn--light" href="tel:+4962069504530">+49 6206 950 45 30 <span class="btn-arrow" aria-hidden="true">→</span></a>
+  <!-- ================= UMWELT ================= -->
+  <section class="section process" id="umwelt">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">Umweltschutz</span>
+        <h2 class="h2">Ein Baum für jede Bewertung.</h2>
+      </div>
+
+      <div class="env-grid">
+        <div class="env-copy reveal">
+          <p>Für jede positive Google-Bewertung lassen wir in Kooperation mit <strong>Plant-for-the-Planet</strong> und <strong>ReviewForest</strong> einen echten Baum pflanzen. Zusätzlich fließt 1&nbsp;€ je Bewertung in die Umweltbildung von Kindern an den Kinderakademien von Plant-for-the-Planet.</p>
+          <h3>Warum wir das tun</h3>
+          <p>Jedes Unternehmen muss wirtschaftlich arbeiten. Wir möchten einen Teil unseres Erfolges zurückgeben — ReviewForest verbindet beides und macht unseren Beitrag transparent nachvollziehbar.</p>
+          <p>Weitere soziale Projekte schließen wir nicht aus. Mit ReviewForest haben wir den ersten Schritt gemacht.</p>
+        </div>
+
+        <aside class="env-panel reveal">
+          <span class="eyebrow">Wald von MP-Dienstleistungen</span>
+          <h3>Schreiben Sie eine Bewertung — wir pflanzen einen Baum in Ihrem Namen.</h3>
+          <ol class="env-steps">
+            <li><b>01</b> Google-Bewertung für MP-Dienstleistungen Bürstadt schreiben</li>
+            <li><b>02</b> Ein echter Baum wird gepflanzt</li>
+            <li><b>03</b> 1&nbsp;€ fließt in die Umweltbildung von Kindern</li>
+          </ol>
+          <a class="btn" href="https://reviewforest.org" target="_blank" rel="noopener">Bewertung abgeben <span class="arrow" aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+    </div>
   </section>
 
+  <!-- ================= JOBS ================= -->
+  <section class="section" id="jobs">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">Jobbörse</span>
+        <h2 class="h2">Arbeiten auf Augenhöhe.</h2>
+      </div>
+
+      <article class="job-card reveal">
+        <div class="job-head">
+          <h3>Reinigungsfachkraft (m/w/d)</h3>
+          <span class="job-meta">Minijob · Teilzeit · Vollzeit — Mannheim &amp; Umgebung</span>
+        </div>
+        <div class="job-body">
+          <div class="job-col">
+            <h4>Das erwartet Sie</h4>
+            <ul>
+              <li>Ein freundliches Team aus begeisterten Mitarbeitern</li>
+              <li>Übertarifliche Bezahlung</li>
+              <li>Professionelles Werkzeug und Arbeitskleidung</li>
+              <li>Fahrzeuge für Ihren Arbeitseinsatz</li>
+            </ul>
+          </div>
+          <div class="job-col">
+            <h4>Das sollten Sie mitbringen</h4>
+            <ul>
+              <li>Kenntnisse in der Gebäude- und/oder Glasreinigung</li>
+              <li>Gute Deutsch- und/oder Englischkenntnisse</li>
+              <li>Führerschein Klasse B</li>
+              <li>Ein gepflegtes Erscheinungsbild</li>
+              <li>Arbeitsbereitschaft an Wochenenden</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job-foot">
+          <p>Wir sehen den Menschen hinter der Arbeitskleidung — bewerben Sie sich formlos per E-Mail oder rufen Sie an.</p>
+          <a class="btn" href="mailto:info@mp-dienstleistungen.com?subject=Bewerbung%20Reinigungsfachkraft">Jetzt bewerben <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= KONTAKT ================= -->
+  <section class="section process" id="kontakt">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">Kontakt</span>
+        <h2 class="h2">Wir freuen uns auf Ihre Anfrage.</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="lead">Fragen, Wünsche oder ein konkretes Objekt? Rufen Sie an oder schreiben Sie uns — wir melden uns in der Regel am selben Werktag.</p>
+          <address>
+            <strong>MP-Dienstleistungen &amp; Gebäudemanagement</strong><br>
+            Manuel Profeta<br>
+            Nibelungenstraße 147<br>
+            68642 Bürstadt (Hessen)<br><br>
+            Telefon: <a href="tel:+4962069504530">+49 6206 950 45 30</a><br>
+            E-Mail: <a href="mailto:info@mp-dienstleistungen.com">info@mp-dienstleistungen.com</a>
+          </address>
+          <p class="contact-hours">Vor Ort in Bürstadt, Mannheim und der gesamten Rhein-Neckar-Region — für Objektbesichtigungen und Angebote.</p>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="cf-name">Name *</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cf-email">E-Mail-Adresse *</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="cf-message">Nachricht *</label>
+            <textarea id="cf-message" name="message" required></textarea>
+          </div>
+          <div class="field field-captcha">
+            <label for="cf-captcha">Spam-Schutz: <span id="captcha-question">…</span> *</label>
+            <input type="text" id="cf-captcha" name="captcha" inputmode="numeric" autocomplete="off" required>
+          </div>
+          <label class="consent">
+            <input type="checkbox" id="cf-consent" required>
+            <span>Ich bin einverstanden, dass meine Angaben zur Kontaktaufnahme gespeichert und verarbeitet werden. Diese Einwilligung kann ich jederzeit widerrufen. *</span>
+          </label>
+          <p class="form-note">Pflichtfelder *. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn">Nachricht senden <span class="arrow" aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="section cta">
+    <div class="section-inner">
+      <span class="eyebrow">Nächster Schritt</span>
+      <h2 class="h2">Lassen Sie uns Ihr Objekt ansehen.</h2>
+      <p>Unverbindliche Besichtigung, festes Angebot, feste Ansprechpartner. Rufen Sie an oder schreiben Sie uns.</p>
+      <div class="cta-actions">
+        <a class="btn btn--light" href="tel:+4962069504530">+49 6206 950 45 30</a>
+        <a class="btn btn--outline" href="#kontakt">Zum Formular <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
 </main>
 
-<!-- ============ FOOTER ============ -->
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a class="brand" href="#top" style="color:inherit">
-        <svg width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="MP-Dienstleistungen Logo">
-          <circle cx="20" cy="20" r="20" fill="#14776e"/>
-          <path d="M8 15h18l6-4H8z" fill="#f1ece1"/>
-          <path d="M8 22h22l6-4H8z" fill="#f1ece1" opacity=".85"/>
-          <path d="M8 29h26l6-4H8z" fill="#f1ece1" opacity=".7"/>
-        </svg>
-        <span class="brand-name">MP-Dienstleistungen
-          <small style="color:#6fbfb5">&amp; Gebäudemanagement</small>
-        </span>
-      </a>
-      <p>Reinigung, Objektbetreuung und Grünpflege für Gewerbekunden — seit 2018 in Bürstadt zu Hause.</p>
+  <div class="footer-inner">
+    <p class="footer-tagline">Verlässlichkeit schafft <em>Vertrauen.</em></p>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <svg width="42" height="42" viewBox="0 0 42 42" role="img" aria-hidden="true">
+            <circle cx="21" cy="21" r="21" fill="#0e6b62"/>
+            <path d="M8 16h19l7-4.5H8z" fill="#f4f1e9"/>
+            <path d="M8 23h23l7-4.5H8z" fill="#f4f1e9" opacity=".82"/>
+            <path d="M8 30h27l7-4.5H8z" fill="#f4f1e9" opacity=".64"/>
+          </svg>
+          <span class="brand-name"><b>MP-Dienstleistungen</b><span>&amp; Gebäudemanagement</span></span>
+        </a>
+        <p>Reinigung, Objektbetreuung und Grünpflege für Gewerbekunden — seit 2018 in Bürstadt zu Hause.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#ablauf">Ablauf</a></li>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#referenzen">Referenzen</a></li>
+          <li><a href="#jobs">Jobs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="agb.html">AGB</a></li>
+          <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <address>
+          Nibelungenstraße 147<br>
+          68642 Bürstadt<br>
+          <a href="tel:+4962069504530">+49 6206 950 45 30</a><br>
+          <a href="mailto:info@mp-dienstleistungen.com">info@mp-dienstleistungen.com</a>
+        </address>
+      </div>
     </div>
 
-    <div class="footer-col">
-      <h3>Navigation</h3>
-      <ul>
-        <li><a href="#leistungen">Leistungen</a></li>
-        <li><a href="#ueber-uns">Über uns</a></li>
-        <li><a href="#umwelt">Umwelt</a></li>
-        <li><a href="#jobs">Jobs</a></li>
-        <li><a href="#referenzen">Referenzen</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> MP-Dienstleistungen &amp; Gebäudemanagement, Bürstadt</span>
+      <span>USt-ID DE 301814647</span>
     </div>
-
-    <div class="footer-col">
-      <h3>Rechtliches</h3>
-      <ul>
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="agb.html">AGB</a></li>
-        <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Kontakt</h3>
-      <address>
-        Nibelungenstraße 147<br>
-        68642 Bürstadt<br>
-        <a href="tel:+4962069504530">+49 6206 950 45 30</a><br>
-        <a href="mailto:info@mp-dienstleistungen.com">info@mp-dienstleistungen.com</a>
-      </address>
-    </div>
-  </div>
-
-  <p class="footer-tagline">Wir machen <em>den Unterschied.</em></p>
-
-  <div class="footer-bottom">
-    <span>© <span id="year">2026</span> MP-Dienstleistungen &amp; Gebäudemanagement, Bürstadt</span>
-    <span>Verlässlichkeit schafft Vertrauen</span>
   </div>
 </footer>
 
