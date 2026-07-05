@@ -22,9 +22,16 @@
     });
   }
 
-  /* ---------- Scroll-Reveal (respektiert prefers-reduced-motion) ---------- */
+  /* ---------- Scroll-Reveal, gestaffelt (respektiert prefers-reduced-motion) ---------- */
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var revealEls = document.querySelectorAll(".reveal");
+
+  /* Staffelung: Position unter den .reveal-Geschwistern desselben Elternelements */
+  revealEls.forEach(function (el) {
+    var siblings = el.parentElement.querySelectorAll(":scope > .reveal");
+    var idx = Array.prototype.indexOf.call(siblings, el);
+    if (idx > 0) el.style.setProperty("--reveal-delay", Math.min(idx * 70, 420) + "ms");
+  });
 
   if (reduceMotion || !("IntersectionObserver" in window)) {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
@@ -36,9 +43,64 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
 
     revealEls.forEach(function (el) { observer.observe(el); });
+  }
+
+  /* ---------- Header-Schatten nach dem ersten Scroll ---------- */
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 8);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ---------- Bilanz-Zähler ---------- */
+  var counters = document.querySelectorAll(".count");
+
+  function renderCount(el, value, decimals) {
+    el.textContent = value.toLocaleString("de-DE", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals
+    });
+  }
+
+  function animateCount(el) {
+    var target = parseFloat(el.getAttribute("data-target"));
+    var decimals = parseInt(el.getAttribute("data-decimals") || "0", 10);
+    var duration = 1800;
+    var start = null;
+
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - p, 4); /* ease-out quart */
+      renderCount(el, target * eased, decimals);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  if (counters.length) {
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      counters.forEach(function (el) {
+        renderCount(el, parseFloat(el.getAttribute("data-target")),
+          parseInt(el.getAttribute("data-decimals") || "0", 10));
+      });
+    } else {
+      var countObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            countObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      counters.forEach(function (el) { countObserver.observe(el); });
+    }
   }
 
   /* ---------- Jahr im Footer ---------- */
