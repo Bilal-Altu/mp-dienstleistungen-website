@@ -2,7 +2,7 @@ name: Vorschau deployen (GitHub Pages)
 
 on:
   push:
-    branches: ["claude/session-eo19wu"]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
