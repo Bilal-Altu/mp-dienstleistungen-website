@@ -341,6 +341,7 @@ h1, h2, h3, h4 {
 .hero-copy .lead { max-width: 42ch; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; margin-top: 0.3rem; }
 .hero-note { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; color: var(--ink-2); }
+.hero-rating { color: var(--petrol-deep); font-weight: 500; }
 
 .hero-figure { position: relative; }
 .hero-figure .frame { aspect-ratio: 4 / 5; }
@@ -767,6 +768,41 @@ h1, h2, h3, h4 {
   .scrollvid-video { transform: none; }
   .scrollvid-head, .scrollvid-cta { opacity: 1 !important; transform: none !important; filter: none !important; }
 }
+
+/* ==========================================================================
+   STIMMEN (Kundenrezensionen)
+   ========================================================================== */
+
+.stars { display: inline-flex; color: var(--petrol); font-size: 1.05rem; letter-spacing: 0.08em; line-height: 1; }
+
+.review-summary {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 2.4rem;
+  padding: clamp(1.4rem, 3vw, 2rem) clamp(1.6rem, 3vw, 2.2rem);
+  border: 1px solid var(--petrol);
+  background: var(--petrol-tint);
+  margin-bottom: 1.2rem;
+}
+.rs-score { display: flex; align-items: center; gap: 1.1rem; }
+.score-num { font-family: var(--serif); font-weight: 460; font-size: clamp(3rem, 2rem + 4vw, 4.4rem); line-height: 0.82; letter-spacing: -0.03em; color: var(--petrol-deep); }
+.rs-meta { display: grid; gap: 0.4rem; }
+.rs-meta .stars { font-size: 1.25rem; }
+.score-count { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+.score-src { display: inline-flex; align-items: center; gap: 0.55rem; font-size: 0.9rem; color: var(--ink-2); margin-right: auto; }
+.g-mark { display: block; flex: none; }
+
+.reviews-grid { display: grid; gap: 1.2rem; }
+@media (min-width: 52rem) { .reviews-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; } }
+
+.voice {
+  display: flex; flex-direction: column; gap: 1rem;
+  padding: clamp(1.6rem, 3vw, 2.2rem);
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+.voice-text { font-family: var(--serif); font-style: italic; font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem); line-height: 1.38; color: var(--ink); }
+.voice-meta { margin-top: auto; padding-top: 0.4rem; display: grid; gap: 0.15rem; }
+.voice-meta b { font-family: var(--serif); font-weight: 500; font-size: 1.15rem; }
+.voice-meta span { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
 
 /* ==========================================================================
    KINO — Grain, Parallax, Wort-Reveal, Spotlight, Referenzen-Laufband
