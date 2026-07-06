@@ -685,6 +685,90 @@ h1, h2, h3, h4 {
 .legal address { font-style: normal; margin-bottom: 1rem; line-height: 1.85; color: var(--ink-2); }
 
 /* ==========================================================================
+   SCROLL-VIDEO (nativ portiert von animated-video-on-scroll)
+   Scroll-getriebenes Auffalten aus einer Pille zu voller Breite + Text-Reveal.
+   ========================================================================== */
+
+.scrollvid { position: relative; height: 300vh; background: var(--dark); }
+
+.scrollvid-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.5rem, 4vh, 3rem) var(--edge);
+  color: var(--on-dark);
+  background: radial-gradient(46% 46% at 50% 16%, #16867b 0%, #0e6b62 22%, #0a4a44 46%, #13201c 88%);
+}
+
+.scrollvid-inner {
+  width: 100%;
+  max-width: var(--maxw);
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  align-content: center;
+  justify-items: center;
+  gap: clamp(0.8rem, 2vh, 1.5rem);
+  text-align: center;
+  padding-block: clamp(0.5rem, 2vh, 1.5rem);
+}
+
+.eyebrow--ondark { color: var(--moss); }
+.eyebrow--ondark::before { background: var(--moss); }
+
+.scrollvid-head { display: grid; gap: 0.7rem; justify-items: center; max-width: 44ch; will-change: transform, opacity, filter; }
+.scrollvid-head h2 { color: var(--on-dark); font-size: clamp(1.9rem, 1.4rem + 2.2vw, 3rem); }
+.scrollvid-head p { color: var(--on-dark-2); max-width: 46ch; font-size: 1rem; }
+
+.scrollvid-media {
+  position: relative;
+  width: min(100%, 1080px);
+  height: 100%;
+  max-height: min(52vh, 560px);
+  align-self: center;
+  will-change: clip-path;
+  /* Startzustand (JS überschreibt live) */
+  clip-path: inset(45% 45% 45% 45% round 1000px);
+}
+.scrollvid-media::after {
+  content: "";
+  position: absolute; inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(244, 241, 233, 0.18);
+  pointer-events: none;
+  z-index: 2;
+}
+.scrollvid-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(0.7);
+  transform-origin: center;
+  will-change: transform;
+  background: var(--dark-2);
+}
+
+.scrollvid-cta { will-change: transform, opacity; }
+
+/* Fallback, wenn JS nicht läuft oder reduzierte Bewegung gewünscht ist: Endzustand */
+.scrollvid.is-static .scrollvid-media,
+.no-js .scrollvid-media { clip-path: inset(0 0 0 0 round 16px); }
+.scrollvid.is-static .scrollvid-video,
+.no-js .scrollvid-video { transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollvid { height: auto; }
+  .scrollvid-sticky { position: static; height: auto; min-height: 60vh; }
+  .scrollvid-media { clip-path: inset(0 0 0 0 round 16px); max-height: 56vh; }
+  .scrollvid-video { transform: none; }
+  .scrollvid-head, .scrollvid-cta { opacity: 1 !important; transform: none !important; filter: none !important; }
+}
+
+/* ==========================================================================
    MOTION
    ========================================================================== */
 
