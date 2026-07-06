@@ -177,6 +177,94 @@
     }
   }
 
+  /* ---------- Kino: Parallax markierter Bildrahmen ---------- */
+  if (!reduceMotion) {
+    var paraEls = document.querySelectorAll("[data-parallax]");
+    if (paraEls.length) {
+      var paraTicking = false;
+      var updatePara = function () {
+        paraTicking = false;
+        var mid = window.innerHeight / 2;
+        paraEls.forEach(function (el) {
+          var speed = parseFloat(el.getAttribute("data-speed") || "0.08");
+          var r = el.getBoundingClientRect();
+          var center = r.top + r.height / 2;
+          el.style.transform = "translate3d(0," + ((mid - center) * speed).toFixed(1) + "px,0)";
+        });
+      };
+      var onParaScroll = function () {
+        if (!paraTicking) { paraTicking = true; requestAnimationFrame(updatePara); }
+      };
+      window.addEventListener("scroll", onParaScroll, { passive: true });
+      window.addEventListener("resize", onParaScroll, { passive: true });
+      updatePara();
+    }
+  }
+
+  /* ---------- Kino: Wort-für-Wort-Reveal großer Überschriften ---------- */
+  var headings = [];
+  document.querySelectorAll(".display, .h2, .footer-tagline").forEach(function (h) {
+    if (!h.closest(".scrollvid")) headings.push(h);
+  });
+
+  if (headings.length) {
+    var wIndex;
+    var splitEl = function (el) {
+      Array.prototype.slice.call(el.childNodes).forEach(function (node) {
+        if (node.nodeType === 3) {
+          if (!node.textContent.trim()) return;
+          var frag = document.createDocumentFragment();
+          node.textContent.split(/(\s+)/).forEach(function (part) {
+            if (!part) return;
+            if (!part.trim()) { frag.appendChild(document.createTextNode(part)); return; }
+            var outer = document.createElement("span");
+            outer.className = "w";
+            var inner = document.createElement("span");
+            inner.className = "w-in";
+            inner.style.transitionDelay = Math.min(wIndex * 45, 700) + "ms";
+            inner.textContent = part;
+            outer.appendChild(inner);
+            frag.appendChild(outer);
+            wIndex++;
+          });
+          el.replaceChild(frag, node);
+        } else if (node.nodeType === 1) {
+          splitEl(node);
+        }
+      });
+    };
+
+    headings.forEach(function (h) { wIndex = 0; splitEl(h); h.classList.add("reveal-words"); });
+
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      headings.forEach(function (h) { h.classList.add("is-in"); });
+    } else {
+      var wordObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            wordObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2, rootMargin: "0px 0px -8% 0px" });
+      headings.forEach(function (h) { wordObserver.observe(h); });
+    }
+  }
+
+  /* ---------- Kino: Spotlight-Cursor im Bilanz-Abschnitt ---------- */
+  var chapter = document.querySelector(".chapter");
+  if (chapter && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    chapter.addEventListener("mousemove", function (e) {
+      var r = chapter.getBoundingClientRect();
+      chapter.style.setProperty("--mx", (e.clientX - r.left) + "px");
+      chapter.style.setProperty("--my", (e.clientY - r.top) + "px");
+      chapter.classList.add("is-hot");
+    });
+    chapter.addEventListener("mouseleave", function () {
+      chapter.classList.remove("is-hot");
+    });
+  }
+
   /* ---------- Kontaktformular mit Rechen-Captcha ---------- */
   var form = document.getElementById("contact-form");
   if (!form) return;
