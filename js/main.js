@@ -265,6 +265,61 @@
     });
   }
 
+  /* ---------- Scroll-Fortschrittslinie ---------- */
+  var progress = document.querySelector(".scroll-progress");
+  if (progress) {
+    var updateProgress = function () {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.transform = "scaleX(" + (h > 0 ? window.scrollY / h : 0) + ")";
+    };
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress, { passive: true });
+    updateProgress();
+  }
+
+  /* ---------- Scrollspy: aktiver Menüpunkt ---------- */
+  var navLinkMap = {};
+  document.querySelectorAll(".nav-links a").forEach(function (a) {
+    var href = a.getAttribute("href") || "";
+    if (href.charAt(0) === "#") navLinkMap[href.slice(1)] = a;
+  });
+  var spySections = Object.keys(navLinkMap)
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+
+  if (spySections.length && "IntersectionObserver" in window) {
+    var spyObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          document.querySelectorAll(".nav-links a.is-active").forEach(function (a) {
+            a.classList.remove("is-active");
+          });
+          var link = navLinkMap[entry.target.id];
+          if (link) link.classList.add("is-active");
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+    spySections.forEach(function (s) { spyObserver.observe(s); });
+  }
+
+  /* ---------- Sticky Mobile-CTA (Anrufen / Angebot) ---------- */
+  var mcta = document.querySelector(".mobile-cta");
+  if (mcta) {
+    var kontaktSec = document.getElementById("kontakt");
+    var updateMcta = function () {
+      var show = window.scrollY > 620;
+      if (kontaktSec && kontaktSec.getBoundingClientRect().top < window.innerHeight * 0.9) {
+        show = false;
+      }
+      if (menu && menu.classList.contains("is-open")) show = false;
+      mcta.classList.toggle("is-show", show);
+    };
+    window.addEventListener("scroll", updateMcta, { passive: true });
+    window.addEventListener("resize", updateMcta, { passive: true });
+    if (toggle) toggle.addEventListener("click", function () { setTimeout(updateMcta, 0); });
+    updateMcta();
+  }
+
   /* ---------- Kontaktformular mit Rechen-Captcha ---------- */
   var form = document.getElementById("contact-form");
   if (!form) return;

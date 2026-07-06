@@ -770,6 +770,43 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
+   SCROLL-FORTSCHRITT · SCROLLSPY · MOBILE-CTA
+   ========================================================================== */
+
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  z-index: 90;
+  background: var(--petrol);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  will-change: transform;
+}
+
+.nav-links a.is-active { color: var(--petrol-deep); }
+.nav-links a.is-active::after { width: 100%; }
+
+.mobile-cta {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 85;
+  display: none;
+  gap: 0.6rem;
+  padding: 0.7rem var(--edge) calc(0.7rem + env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid var(--line);
+  transform: translateY(130%);
+  transition: transform 0.4s var(--ease);
+}
+.mobile-cta.is-show { transform: none; }
+.mobile-cta .btn { flex: 1; min-height: 48px; justify-content: center; padding-inline: 0.8rem; }
+@media (max-width: 59.99rem) { .mobile-cta { display: flex; } }
+@media (min-width: 60rem) { .mobile-cta { display: none !important; } }
+
+/* ==========================================================================
    STIMMEN (Kundenrezensionen)
    ========================================================================== */
 
